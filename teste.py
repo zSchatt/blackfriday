@@ -4,90 +4,30 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from time import sleep
 
-def filtro_itens():
-    i = 1
-    while i != 51:
-        sleep(1)
-        itens = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
-        if not 'PATROCINADOS' in itens[i].text.upper():
-            if 'APPLE' in itens[i].text.upper():
-                if '$' in itens[i].text.upper():
-                    print('=-==-==-==-==-==-==-==-==-==-==-=')
-                    print(itens[i].text)
-                    i += 1
-                else:
-                    i += 1
-            elif 'ASUS' in itens[i].text.upper():
-                if '$' in itens[i].text.upper():
-                    print('=-==-==-==-==-==-==-==-==-==-==-=')
-                    print(itens[i].text)
-                    i += 1
-                else:
-                    i += 1
-            elif 'LG' in itens[i].text.upper():
-                if '$' in itens[i].text.upper():
-                    print('=-==-==-==-==-==-==-==-==-==-==-=')
-                    print(itens[i].text)
-                    i += 1
-                else:
-                    i += 1
-            elif 'MOTOROLA' in itens[i].text.upper():
-                if '$' in itens[i].text.upper():
-                    print('=-==-==-==-==-==-==-==-==-==-==-=')
-                    print(itens[i].text)
-                    i += 1
-                else:
-                    i += 1
-            elif 'XIAOMI' in itens[i].text.upper():
-                if '$' in itens[i].text.upper():
-                    print('=-==-==-==-==-==-==-==-==-==-==-=')
-                    print(itens[i].text)
-                    i += 1
-                else:
-                    i += 1
-            elif 'SMARTPHONE' in itens[i].text.upper():
-                if '$' in itens[i].text.upper():
-                    print('=-==-==-==-==-==-==-==-==-==-==-=')
-                    print(itens[i].text)
-                    i += 1
-                else:
-                    i += 1
-            elif 'SAMSUNG' in itens[i].text.upper():
-                if '$' in itens[i].text.upper():
-                    print('=-==-==-==-==-==-==-==-==-==-==-=')
-                    print(itens[i].text)
-                    i += 1
-                else:
-                    i += 1
-            else:
-                i += 1
-        else: i += 1
-
-def troca_pagina(contagem):
-    troca_pag = driver.find_elements(By.CSS_SELECTOR, 'li.a-normal')
-    troca_pag[contagem].click()
+def busca_iphone():
+    option = Options()
+    option.headless = True
+    driver = webdriver.Firefox()
     
-
-
-option = Options()
-option.headless = True
-driver = webdriver.Firefox()
-
-url_amazon = 'https://www.amazon.com.br/'
-driver.get(url_amazon)
-sleep(1)
-driver.find_element(By.ID, 'twotabsearchtextbox').send_keys('Celulares' + Keys.ENTER)
-sleep(1.5)
-driver.find_element(By.CLASS_NAME, 'a-button-inner').click()
-driver.find_element(By.ID, 's-result-sort-select_2').click()
-
-for i in range(1, 4):
-    filtro_itens()
-    troca_pagina(i)
-
-cont = 1
-while cont != 2:
-    i = 3
-    filtro_itens()
-    troca_pagina(i)
-    cont += 1
+    url_amazon = 'https://www.amazon.com.br/Eletronicos-e-Tecnologia/b/?ie=UTF8&node=16209062011&ref_=nav_cs_electronics_aa977060142142808a563d1c6c6b2474'
+    driver.get(url_amazon)
+    sleep(1)
+    driver.find_elements(By.CSS_SELECTOR, 'li.a-spacing-micro.apb-browse-refinements-indent-2')[4].click()
+    #APPLE
+    driver.find_elements(By.CSS_SELECTOR, 'div.bxc-grid__column.bxc-grid__column--3-of-12.bxc-grid__column--light')[0].click()
+    sleep(1)
+    driver.find_elements(By.CSS_SELECTOR, 'span.a-size-base.a-color-base')[8].click()
+    sleep(1)
+    driver.find_element(By.CLASS_NAME, 'a-button-inner').click()
+    driver.find_element(By.ID, 's-result-sort-select_2').click()
+    sleep(1)
+    celulares = driver.find_elements(By.CLASS_NAME, 'sg-col-inner')
+        
+    for i in range(4, 28):
+        sleep(1)
+        cel = celulares[i].text
+        if '$' in celulares[i].text:
+            pesquisa = re.findall('((i|I)(Phone|phone|PHONE)(\s\d+|\d+))', cel)
+            
+            print(pesquisa)
+        i += 1
