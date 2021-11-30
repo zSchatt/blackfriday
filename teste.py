@@ -30,4 +30,6 @@ def busca_iphone():
             pesquisa = re.findall('((i|I)(Phone|phone|PHONE)(\s\d+|\d+))', cel)
             
             print(pesquisa)
+            
         i += 1
+        driver.close()
