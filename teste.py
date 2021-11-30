@@ -33,3 +33,5 @@ def busca_iphone():
             
         i += 1
         driver.close()
+
+busca_amazon()
