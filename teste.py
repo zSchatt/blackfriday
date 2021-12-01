@@ -40,9 +40,6 @@ driver.find_elements(By.CSS_SELECTOR, 'li.a-spacing-micro.apb-browse-refinements
 #SAMSUNG
 driver.find_elements(By.CSS_SELECTOR, 'div.bxc-grid__column.bxc-grid__column--3-of-12.bxc-grid__column--light')[1].click()
 sleep(1)
-driver.close()
-driver.get(url_amazon)
-sleep(1)
 driver.find_elements(By.CSS_SELECTOR, 'li.a-spacing-micro.apb-browse-refinements-indent-2')[4].click()
 driver.find_elements(By.CSS_SELECTOR, 'span.a-size-base.a-color-base')[7].click()
 sleep(1)
