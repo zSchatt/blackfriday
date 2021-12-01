@@ -26,9 +26,30 @@ for i in range(4, 28):
     sleep(1)
     cel = celulares[i].text
     if '$' in celulares[i].text:
-        pesquisa = re.findall('((i|I)(Phone|phone|PHONE)(\s\d+|\d+))', cel)
-
-        print(pesquisa)
+        troca = re.sub('(iphone|Iphone|IPHONE)', 'iPhone', cel)
+        pes = re.compile('((?:i|I)(?:Phone|phone|PHONE)(?:\s\d+|\d+\w+))')
+        pre = re.compile('((R\$)( ?|\d+)(\d{1,3}|\d{1,3})(.\d{1,3})(\s\d{1,2}|,\d{1,2}))')
+        pesquisa = pes.findall(troca)
+        preco = pre.findall(troca)
+        
 
     i += 1
-    driver.close()
+    
+driver.close()
+sleep(5)
+driver.get(url_amazon)
+sleep(1)
+driver.find_elements(By.CSS_SELECTOR, 'li.a-spacing-micro.apb-browse-refinements-indent-2')[4].click()
+#SAMSUNG
+driver.find_elements(By.CSS_SELECTOR, 'div.bxc-grid__column.bxc-grid__column--3-of-12.bxc-grid__column--light')[1].click()
+sleep(1)
+driver.close()
+driver.get(url_amazon)
+sleep(1)
+driver.find_elements(By.CSS_SELECTOR, 'li.a-spacing-micro.apb-browse-refinements-indent-2')[4].click()
+driver.find_elements(By.CSS_SELECTOR, 'span.a-size-base.a-color-base')[7].click()
+sleep(1)
+driver.find_element(By.CLASS_NAME, 'a-button-inner').click()
+driver.find_element(By.ID, 's-result-sort-select_2').click()
+sleep(1)
+celulares = driver.find_elements(By.CLASS_NAME, 'sg-col-inner')
