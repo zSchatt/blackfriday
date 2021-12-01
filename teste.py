@@ -8,7 +8,7 @@ option = Options()
 option.headless = True
 driver = webdriver.Firefox()
 
-url_amazon = 'https://www.amazon.com.br/Eletronicos-e-Tecnologia/b/?ie=UTF8&node=16209062011&ref_=nav_cs_electronics_aa977060142142808a563d1c6c6b2474'
+url_amazon = '''https://www.amazon.com.br/Eletronicos-e-Tecnologia/b/?ie=UTF8&node=16209062011&ref_=nav_cs_electronics_aa977060142142808a563d1c6c6b2474'''
 driver.get(url_amazon)
 sleep(1)
 driver.find_elements(By.CSS_SELECTOR, 'li.a-spacing-micro.apb-browse-refinements-indent-2')[4].click()
@@ -31,8 +31,7 @@ for i in range(4, 28):
         pre = re.compile('((R\$)( ?|\d+)(\d{1,3}|\d{1,3})(.\d{1,3})(\s\d{1,2}|,\d{1,2}))')
         pesquisa = pes.findall(troca)
         preco = pre.findall(troca)
-        
-    i += 1
+
     
 driver.close()
 sleep(5)
@@ -52,3 +51,12 @@ driver.find_element(By.CLASS_NAME, 'a-button-inner').click()
 driver.find_element(By.ID, 's-result-sort-select_2').click()
 sleep(1)
 celulares = driver.find_elements(By.CLASS_NAME, 'sg-col-inner')
+for i in range(4, 28):
+    sleep(1)
+    cel = celulares[i].text
+    if '$' in celulares[i].text:
+        troca = re.sub('(SAMSUNG)', 'Samsung', cel)
+        pes = re.compile('((?:SAMSUNG)(?:\s\d+|\d+\w+))')
+        pre = re.compile('((R\$)( ?|\d+)(\d{1,3}|\d{1,3})(.\d{1,3})(\s\d{1,2}|,\d{1,2}))')
+        pesquisa = pes.findall(troca)
+        preco = pre.findall(troca)
