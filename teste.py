@@ -32,7 +32,6 @@ for i in range(4, 28):
         pesquisa = pes.findall(troca)
         preco = pre.findall(troca)
 
-    
 driver.close()
 sleep(5)
 driver.get(url_amazon)
