@@ -1,5 +1,5 @@
 lojas = 'amazon'
-marcas = 'xiaomi'
+marcas = 'apple'
 # --
 access_key_s3 = ''
 secret_key = ''
