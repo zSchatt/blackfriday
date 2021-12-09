@@ -1421,7 +1421,8 @@ DevTools listening on ws://localhost:61967/devtools/browser/86837fea-f26f-452d-8
 1635439507597	Marionette	INFO	Stopped listening on port 61972
 JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
 
-###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lostconsole.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileq0l0ha\\search.json.mozlz4", (void 0)))
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileq0l0ha\\search.json.mozlz4", (void 0)))
 DevTools listening on ws://localhost:62046/devtools/browser/160ddd5e-2976-4099-8885-680613a86143
 1635439508827	Marionette	INFO	Listening on port 62051
 1635439508979	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
@@ -2158,7 +2159,8 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 DevTools listening on ws://localhost:55253/devtools/browser/b3694209-6d68-4bc8-bfef-ad44655efbeb
 1635941353212	Marionette	INFO	Listening on port 55259
 1635941353282	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.log: WebExtensions: reset-default-search: starting.1635941863572	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla FirefoxJavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+console.log: WebExtensions: reset-default-search: starting.
+1635941863572	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla FirefoxJavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
 debugging-port" "55496" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilevu8hK6"
 *** You are running in headless mode.
 1635941863888	Marionette	INFO	Marionette enabled
@@ -9713,10 +9715,12 @@ DevTools listening on ws://localhost:65253/devtools/browser/166a29be-dd48-472e-8
 1638457557592	Marionette	INFO	Listening on port 65260
 1638457557858	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 1638457572431	Marionette	INFO	Stopped listening on port 65260
+
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
 JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
 
 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
 
 1638457624724	geckodriver	INFO	Listening on 127.0.0.1:65415
 1638457627803	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65416" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofile4lZOgE"
@@ -10751,7 +10755,6 @@ onPacket@resource://devtools/server/devtools-server-connection.js:362:24
 _onPacketReceived@resource://devtools/shared/transport/js-window-actor-transport.js:48:18
 emit@resource://gre/modules/EventEmitter.jsm:160:20
 receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:513:21
-
 JavaScript error: resource://devtools/client/inspector/rules/utils/utils.js, line 192: TypeError: rule is undefined
 console.error: "isValidHoverTarget rejected with unexpected reason:"
 console.error: (new TypeError("rule is undefined", "resource://devtools/client/inspector/rules/utils/utils.js", 192))

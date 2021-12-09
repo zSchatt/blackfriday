@@ -305,13 +305,15 @@ def scrappy_celulares(driver, url):
         sleep(1)
         driver.find_elements(By.CSS_SELECTOR, 'div.bxc-grid__image.bxc-grid__image--light')[3].click()
         sleep(1)
+
         
         # clicks para definir order by
         driver.find_element(By.ID, 'a-autoid-0-announce').click()
         driver.find_element(By.ID, 's-result-sort-select_1').click()
         sleep(1)
-        
+
         # click para especifcar APENAS celulares
+        sleep(1)
         driver.find_elements(By.CSS_SELECTOR, 'span.a-size-base.a-color-base')[9].click()
         elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
         
@@ -387,7 +389,7 @@ def scrappy_celulares(driver, url):
                             {
                             "NOME" : nome,
                             "PRECO" : preco,
-                            "RAM" : ram,
+                            "RAM" : ram
                             }
                         ]
                     }
@@ -419,6 +421,7 @@ def scrappy_celulares(driver, url):
         sleep(1)
 
         # clicks para definir order by
+        sleep(1)
         driver.find_element(By.ID, 'a-autoid-0-announce').click()
         driver.find_element(By.ID, 's-result-sort-select_1').click()
         sleep(1)
@@ -548,9 +551,9 @@ def scrappy_celulares(driver, url):
         uri = 'Celulares-Comunicacao/b/?ie=UTF8&node=16243803011&ref_=sv_megamenu_ce_teste_3'
         driver.get(url+'/'+uri)
         driver.find_elements(By.CSS_SELECTOR, 'div.bxc-grid__image.bxc-grid__image--light')[3].click()
-        sleep(1)
 
         # clicks para definir order by
+        sleep(1)
         driver.find_element(By.ID, 'a-autoid-0-announce').click()
         driver.find_element(By.ID, 's-result-sort-select_1').click()
         sleep(1)
@@ -592,6 +595,7 @@ def scrappy_celulares(driver, url):
                 
                 if 'CABEÇA' in elements[index].text.upper():
                     
+
                     pass
 
                 elif 'CARREGADOR' in elements[index].text.upper():
@@ -682,8 +686,9 @@ def scrappy_celulares(driver, url):
         sleep(1)
         driver.find_elements(By.CSS_SELECTOR, 'div.a-checkbox.a-checkbox-fancy.aok-float-left.apb-browse-refinements-checkbox')[36].click()
         sleep(1)
-
+        
         # clicks para definir order by
+        sleep(1)
         driver.find_element(By.ID, 'a-autoid-0-announce').click()
         driver.find_element(By.ID, 's-result-sort-select_1').click()
         elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
