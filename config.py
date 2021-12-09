@@ -1,5 +1,5 @@
 lojas = 'amazon'
-marcas = 'xiaomi'
+marcas = 'samsung'
 # --
 access_key_s3 = ''
 secret_key = ''
@@ -12,5 +12,5 @@ region = ''
         #   nome
         #   preco
         #   ram
-        #   precessador
+        #   processador
         #]
