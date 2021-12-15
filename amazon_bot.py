@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from time import sleep
 import config
+import functions
 import json
 import re
 import os
@@ -328,7 +329,9 @@ def scrappy_celulares(driver, url):
             sleep(1.5)
             elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
             pesquisa_itens(elements)
-
+        
+        # function para baixar do s3
+        functions.download_s3('amazon_apple.json')
 
 
 
@@ -442,7 +445,9 @@ def scrappy_celulares(driver, url):
             elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
             sleep(1)
             pesquisa_itens(elements)
-    
+
+        # function para baixar do s3
+        functions.download_s3('amazon_motorola.json')
 
 
 
@@ -572,7 +577,9 @@ def scrappy_celulares(driver, url):
             sleep(1)
             elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
             pesquisa_itens(elements)
-        
+
+        # function para baixar do s3
+        functions.download_s3('amazon_samsung.json')        
 
 
 
@@ -706,6 +713,8 @@ def scrappy_celulares(driver, url):
             elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
             pesquisa_itens(elements)
 
+        # function para baixar do s3
+        functions.download_s3('amazon_xiaomi.json')
 
 
 
