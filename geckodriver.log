@@ -11896,3 +11896,4 @@ console.log: WebExtensions: reset-default-search: No addons in our list are inst
 JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
 Exiting due to channel error.
 Listening on 127.0.0.1:61275
+

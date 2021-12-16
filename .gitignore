@@ -2,5 +2,5 @@ __pycache__/
 blackfriday/
 geckodriver.log/
 geckodriver.exe/
-config.py/
+.env/
 teste.py/

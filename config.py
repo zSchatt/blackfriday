@@ -1,7 +1,9 @@
+import os
+
 lojas = 'amazon'
 marcas = 'samsung'
 
-access_key_s3 = 'AKIA47H6STV7S2HYH54F'
-secret_key = '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'
+access_key_s3 = os.getenv('ACESSO')
+secret_key = os.getenv('SECRETO')
 region = 'us-east-1'
 bucket_name = 'amazon.bot'
