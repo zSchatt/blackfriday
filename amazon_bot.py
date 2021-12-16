@@ -330,6 +330,9 @@ def scrappy_celulares(driver, url):
             elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
             pesquisa_itens(elements)
         
+        # function para fazer upload do s3
+        functions.upload_s3('apple')
+        
         # function para baixar do s3
         functions.download_s3('amazon_apple.json')
 
@@ -445,6 +448,9 @@ def scrappy_celulares(driver, url):
             elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
             sleep(1)
             pesquisa_itens(elements)
+
+        # function para fazer upload do s3
+        functions.upload_s3('motorola')
 
         # function para baixar do s3
         functions.download_s3('amazon_motorola.json')
@@ -578,6 +584,9 @@ def scrappy_celulares(driver, url):
             elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
             pesquisa_itens(elements)
 
+        # function para fazer upload do s3
+        functions.upload_s3('samsung')
+        
         # function para baixar do s3
         functions.download_s3('amazon_samsung.json')        
 
@@ -713,6 +722,9 @@ def scrappy_celulares(driver, url):
             elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
             pesquisa_itens(elements)
 
+        # function para fazer upload do s3
+        functions.upload_s3('xiaomi')
+        
         # function para baixar do s3
         functions.download_s3('amazon_xiaomi.json')
 

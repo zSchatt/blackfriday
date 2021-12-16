@@ -15,7 +15,7 @@ def create_webdriver():
     return driver
 
 
-def upload_s3():
+def upload_s3(marca):
     
     # conectando ao serviço do S3
     client_s3 = boto3.client(
@@ -26,12 +26,25 @@ def upload_s3():
     
     # fazendo upload para o S3
     jsons_amazon = r'C:\Users\User\Desktop\novo projeto\blackfriday\amazon'
+
+    for i in enumerate(os.listdir(jsons_amazon)):
     
-    for json in enumerate(os.listdir(jsons_amazon)):
+        match marca:
+            case 'apple': arquivo = 'amazon_apple.json'
+            case 'motorola': arquivo = 'amazon_motorola.json'
+            case 'xiaomi': arquivo = 'amazon_xiaomi.json'
+            case 'samsung': arquivo = 'amazon_samsung.json'
+        
+        match caminho:
+            case 'apple': caminho = os.path.join('amazon', 'amazon_apple.json')
+            case 'motorola': caminho = os.path.join('amazon', 'amazon_motorola.json')
+            case 'xiaomi': caminho = os.path.join('amazon', 'amazon_xiaomi.json')
+            case 'samsung': caminho = os.path.join('amazon', 'amazon_samsung.json')
+
         client_s3.upload_file(
-            jsons_amazon[json],
+            caminho,
             bucket_name,
-            json)
+            arquivo)
 
 
 def download_s3(amazon):
