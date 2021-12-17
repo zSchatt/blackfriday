@@ -1,7 +1,7 @@
 import os
 
 lojas = 'amazon'
-marcas = 'apple'
+marcas = 'motorola'
 
 access_key_s3 = os.getenv('ACESSO')
 secret_key = os.getenv('SECRETO')

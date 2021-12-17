@@ -20,6 +20,8 @@ def scrappy_celulares(driver, url):
                 #pegar elements dnv
                 sleep(1.5)
                 elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
+                sleep(1)
+                click = driver.find_elements(By.CSS_SELECTOR, 'span.a-size-base-plus.a-color-base.a-text-normal')
                 sleep(1.5)
                     
                 if not '$' in elements[index].text:
@@ -29,7 +31,7 @@ def scrappy_celulares(driver, url):
                 elif '$' in elements[index].text:
                     
                     sleep(1.5)
-                    elements[index].click()
+                    click[index].click()
 
                     try:
                         
@@ -356,6 +358,8 @@ def scrappy_celulares(driver, url):
                 # pegar elements dnv
                 sleep(1.5)
                 elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
+                sleep(0.5)
+                click = driver.find_elements(By.CSS_SELECTOR, 'span.a-size-base-plus.a-color-base.a-text-normal')
                 sleep(1.5)
 
                 if not '$' in elements[index].text:
@@ -365,7 +369,7 @@ def scrappy_celulares(driver, url):
                 elif '$' in elements[index].text:
                     
                     sleep(2)
-                    elements[index].click()
+                    click[index].click()
 
                     try:
                         
@@ -473,8 +477,12 @@ def scrappy_celulares(driver, url):
             for index, i in enumerate(elements):
 
                 # pegar elements dnv
+                sleep(1.5)
                 elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
-                
+                sleep(1)
+                click = driver.find_elements(By.CSS_SELECTOR, 'span.a-size-base-plus.a-color-base.a-text-normal')
+                sleep(1.5)
+
                 if 'MICRO SDHC' in elements[index].text.upper():
                    
                     pass
@@ -498,11 +506,15 @@ def scrappy_celulares(driver, url):
                 elif 'NOTEBOOK' in elements[index].text.upper():
 
                     pass
+                
+                elif 'PEN' in elements[index].text.upper():
+
+                    pass
 
                 elif '$' in elements[index].text:
                     
                     sleep(2)
-                    elements[index].click()
+                    click[index].click()
 
                     try:
                         
@@ -571,7 +583,7 @@ def scrappy_celulares(driver, url):
         sleep(1)
 
         # click para especifcar APENAS celulares
-        driver.find_elements(By.CSS_SELECTOR, 'span.a-size-base.a-color-base')[9].click()
+        driver.find_elements(By.CSS_SELECTOR, 'span.a-size-base.a-color-base')[8].click()
         elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
 
         pesquisa_itens(elements)
@@ -608,8 +620,12 @@ def scrappy_celulares(driver, url):
             for index, i in enumerate(elements):    
                 
                 # pegar elements dnv
+                sleep(1.5)
                 elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
-                
+                sleep(0.5)
+                click = driver.find_elements(By.CSS_SELECTOR, 'span.a-size-base-plus.a-color-base.a-text-normal')
+                sleep(1.5)
+
                 if 'CABEÇA' in elements[index].text.upper():
                     
 
@@ -638,7 +654,7 @@ def scrappy_celulares(driver, url):
                 elif '$' in elements[index].text:
                     
                     sleep(1)
-                    elements[index].click()
+                    click[index].click()
                     
                     try:
                         
@@ -701,7 +717,7 @@ def scrappy_celulares(driver, url):
         sleep(1)
         driver.find_elements(By.CSS_SELECTOR, 'div.a-section.octopus-pc-category-card-v2-category')[0].click()
         sleep(1)
-        driver.find_elements(By.CSS_SELECTOR, 'div.a-checkbox.a-checkbox-fancy.aok-float-left.apb-browse-refinements-checkbox')[47].click()
+        driver.find_elements(By.CSS_SELECTOR, 'div.a-checkbox.a-checkbox-fancy.aok-float-left.apb-browse-refinements-checkbox')[48].click()
         sleep(1)
         
         # clicks para definir order by
@@ -741,7 +757,7 @@ def scrappy_celulares(driver, url):
 
 
     match config.marcas:
-        case 'todas': apple(driver, url), motorola(driver, url), samsung(driver, url), xiaomi(driver, url)
+        case 'todas': xiaomi(driver, url), motorola(driver, url), samsung(driver, url), apple(driver, url)
         case 'apple': apple(driver, url)
         case 'motorola': motorola(driver, url)
         case 'samsung': samsung(driver, url)
