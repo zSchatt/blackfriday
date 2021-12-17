@@ -11,7 +11,7 @@ bucket_name = config.bucket_name
 def create_webdriver():
     option = Options()
     option.headless = True
-    driver = webdriver.Firefox()#options=option)
+    driver = webdriver.Firefox()
     return driver
 
 
