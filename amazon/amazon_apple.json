@@ -1,0 +1,52 @@
+{
+    "Apple": [
+        {
+            "NOME": "Smartphone Apple iPhone 6 32GB Desbloqueado Cinza Espacial",
+            "PRECO": "R$1.449,00",
+            "RAM": "3 GB",
+            "PROCESSADOR": "1.4 GHz Dual Core"
+        },
+        {
+            "NOME": "Iphone 6S 32Gb Prateado",
+            "PRECO": "R$1.715,99",
+            "RAM": "2 GB",
+            "PROCESSADOR": "1.8 GHz Dual Core"
+        },
+        {
+            "NOME": "iPhone 6S, Apple, MN0W2BR/A, 32 GB, 4.7\", Cinza, Apple, IPHONE 6S MN0W2BR/A, 32 GB, 4.7'', Cinza",
+            "PRECO": "R$3.249,00",
+            "RAM": "2 GB",
+            "PROCESSADOR": "1.8 GHz Dual Core"
+        },
+        {
+            "NOME": "Apple iPhone 8, 64GB, Ouro - totalmente desbloqueado (Renovado)",
+            "PRECO": "R$1.949,00",
+            "RAM": "64 GB",
+            "PROCESSADOR": "2x Monsoon + 4x Mistral"
+        },
+        {
+            "NOME": "iPhone Apple 6S. Rose Gold. Tela de 4.7 . 32GB. C\u00e2mera de 12MP",
+            "PRECO": "R$1.980,00",
+            "RAM": "2 GB",
+            "PROCESSADOR": "1.8 GHz Dual Core"
+        },
+        {
+            "NOME": "Iphone 7 128gb Rose Gold Apple",
+            "PRECO": "R$2.399,00",
+            "RAM": "3 GB",
+            "PROCESSADOR": "2.2 GHz Quad Core"
+        },
+        {
+            "NOME": "iPhone 6s Plus 32GB Cinza Espacial",
+            "PRECO": "R$2.288,99",
+            "RAM": "2 GB",
+            "PROCESSADOR": "2 GHz Dual Core"
+        },
+        {
+            "NOME": "iPhone 7, Apple, Tela de 4,7\", 4G, 128 GB, C\u00e2mera de 12 MP, Preto Matte",
+            "PRECO": "R$2.319,99",
+            "RAM": "2 GB",
+            "PROCESSADOR": "2.2 GHz Quad Core"
+        }
+    ]
+}

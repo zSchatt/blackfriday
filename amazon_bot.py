@@ -304,7 +304,7 @@ def scrappy_celulares(driver, url):
         uri = 'Celulares-Comunicacao/b/?ie=UTF8&node=16243803011&ref_=sv_megamenu_ce_teste_3'
         driver.get(url+'/'+uri)
         sleep(1)
-        driver.find_elements(By.CSS_SELECTOR, 'div.bxc-grid__image.bxc-grid__image--light')[3].click()
+        driver.find_elements(By.CSS_SELECTOR, 'div.bxc-grid__image.bxc-grid__image--light')[2].click()
         sleep(1)
 
         
@@ -328,10 +328,11 @@ def scrappy_celulares(driver, url):
             num.click()
             sleep(1.5)
             elements = driver.find_elements(By.CSS_SELECTOR, 'div.a-section.a-spacing-medium')
+            sleep(1.5)
             pesquisa_itens(elements)
         
         # function para fazer upload do s3
-        functions.upload_s3('apple')
+        functions.upload_s3('apple', 'apple')
         
         # function para baixar do s3
         functions.download_s3('amazon_apple.json')
@@ -450,7 +451,7 @@ def scrappy_celulares(driver, url):
             pesquisa_itens(elements)
 
         # function para fazer upload do s3
-        functions.upload_s3('motorola')
+        functions.upload_s3('motorola', 'motorola')
 
         # function para baixar do s3
         functions.download_s3('amazon_motorola.json')
@@ -585,7 +586,7 @@ def scrappy_celulares(driver, url):
             pesquisa_itens(elements)
 
         # function para fazer upload do s3
-        functions.upload_s3('samsung')
+        functions.upload_s3('samsung', 'samsung')
         
         # function para baixar do s3
         functions.download_s3('amazon_samsung.json')        
@@ -700,7 +701,7 @@ def scrappy_celulares(driver, url):
         sleep(1)
         driver.find_elements(By.CSS_SELECTOR, 'div.a-section.octopus-pc-category-card-v2-category')[0].click()
         sleep(1)
-        driver.find_elements(By.CSS_SELECTOR, 'div.a-checkbox.a-checkbox-fancy.aok-float-left.apb-browse-refinements-checkbox')[36].click()
+        driver.find_elements(By.CSS_SELECTOR, 'div.a-checkbox.a-checkbox-fancy.aok-float-left.apb-browse-refinements-checkbox')[47].click()
         sleep(1)
         
         # clicks para definir order by
@@ -723,7 +724,7 @@ def scrappy_celulares(driver, url):
             pesquisa_itens(elements)
 
         # function para fazer upload do s3
-        functions.upload_s3('xiaomi')
+        functions.upload_s3('xiaomi', 'xiaomi')
         
         # function para baixar do s3
         functions.download_s3('amazon_xiaomi.json')
